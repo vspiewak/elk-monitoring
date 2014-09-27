@@ -1,0 +1,3078 @@
+{
+  "title": "Collectd",
+  "services": {
+    "query": {
+      "list": {
+        "0": {
+          "id": 0,
+          "color": "#7EB26D",
+          "alias": "",
+          "pin": false,
+          "type": "lucene",
+          "enable": true,
+          "query": "*"
+        },
+        "1": {
+          "id": 1,
+          "color": "#EAB839",
+          "alias": "df run-shm",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"df\" AND type_instance:\"run-shm\""
+        },
+        "2": {
+          "id": 2,
+          "color": "#6ED0E0",
+          "alias": "df root",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"df\" AND type_instance:\"root\""
+        },
+        "3": {
+          "id": 3,
+          "color": "#EF843C",
+          "alias": "df boot",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"df\" AND type_instance:\"boot\""
+        },
+        "4": {
+          "id": 4,
+          "color": "#E24D42",
+          "alias": "df dev",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"df\" AND type_instance:\"dev\""
+        },
+        "5": {
+          "id": 5,
+          "color": "#1F78C1",
+          "alias": "df vagrant",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"df\" AND type_instance:\"vagrant\""
+        },
+        "6": {
+          "id": 6,
+          "color": "#BA43A9",
+          "alias": "df run-lock",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"df\" AND type_instance:\"run-lock\""
+        },
+        "7": {
+          "id": 7,
+          "color": "#705DA0",
+          "alias": "ps running",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"processes\" AND collectd_type:\"ps_state\" AND type_instance:\"running\""
+        },
+        "8": {
+          "id": 8,
+          "color": "#508642",
+          "alias": "ps zombies",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"processes\" AND collectd_type:\"ps_state\" AND type_instance:\"zombies\""
+        },
+        "9": {
+          "id": 9,
+          "color": "#CCA300",
+          "alias": "ps stopped",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"processes\" AND collectd_type:\"ps_state\" AND type_instance:\"stopped\""
+        },
+        "10": {
+          "id": 10,
+          "color": "#447EBC",
+          "alias": "ps sleeping",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"processes\" AND collectd_type:\"ps_state\" AND type_instance:\"sleeping\""
+        },
+        "11": {
+          "id": 11,
+          "color": "#C15C17",
+          "alias": "ps blocked",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"processes\" AND collectd_type:\"ps_state\" AND type_instance:\"blocked\""
+        },
+        "12": {
+          "id": 12,
+          "color": "#890F02",
+          "alias": "ps paging",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"processes\" AND collectd_type:\"ps_state\" AND type_instance:\"paging\""
+        },
+        "13": {
+          "id": 13,
+          "color": "#0A437C",
+          "alias": "sda ops",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin_instance:\"sda\" AND collectd_type:\"disk_ops\""
+        },
+        "14": {
+          "id": 14,
+          "color": "#6D1F62",
+          "alias": "sda time",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin_instance:\"sda\" AND collectd_type:\"disk_time\""
+        },
+        "15": {
+          "id": 15,
+          "color": "#584477",
+          "alias": "sda merged",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin_instance:\"sda\" AND collectd_type:\"disk_merged\""
+        },
+        "16": {
+          "id": 16,
+          "color": "#B7DBAB",
+          "alias": "swap free",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"swap\" AND type_instance:\"free\""
+        },
+        "17": {
+          "id": 17,
+          "color": "#F4D598",
+          "alias": "swap used",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"swap\" AND type_instance:\"used\""
+        },
+        "18": {
+          "id": 18,
+          "color": "#70DBED",
+          "alias": "swap cached",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"swap\" AND type_instance:\"cached\""
+        },
+        "19": {
+          "id": 19,
+          "color": "#F9BA8F",
+          "alias": "mem free",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"memory\" AND type_instance:\"free\""
+        },
+        "20": {
+          "id": 20,
+          "color": "#F29191",
+          "alias": "mem used",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"memory\" AND type_instance:\"used\""
+        },
+        "21": {
+          "id": 21,
+          "color": "#82B5D8",
+          "alias": "page cache",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"memory\" AND type_instance:\"cached\""
+        },
+        "22": {
+          "id": 22,
+          "color": "#E5A8E2",
+          "alias": "buffer cache",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"memory\" AND type_instance:\"buffered\""
+        },
+        "23": {
+          "id": 23,
+          "color": "#AEA2E0",
+          "alias": "load",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"load\" AND collectd_type:\"load\""
+        },
+        "24": {
+          "id": 24,
+          "color": "#629E51",
+          "alias": "cpu0 idle",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"0\" AND type_instance:\"idle\""
+        },
+        "25": {
+          "id": 25,
+          "color": "#E5AC0E",
+          "alias": "cpu1 idle",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"idle\""
+        },
+        "26": {
+          "id": 26,
+          "color": "#64B0C8",
+          "alias": "cpu0 nice",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"0\" AND type_instance:\"nice\""
+        },
+        "27": {
+          "id": 27,
+          "color": "#E0752D",
+          "alias": "cpu0 wait",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"0\" AND type_instance:\"wait\""
+        },
+        "28": {
+          "id": 28,
+          "color": "#BF1B00",
+          "alias": "cpu1 wait",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"wait\""
+        },
+        "29": {
+          "id": 29,
+          "color": "#0A50A1",
+          "alias": "cpu0 system",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"0\" AND type_instance:\"system\""
+        },
+        "30": {
+          "id": 30,
+          "color": "#962D82",
+          "alias": "cpu1 system",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"system\""
+        },
+        "31": {
+          "id": 31,
+          "color": "#614D93",
+          "alias": "cpu0 user",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"0\" AND type_instance:\"user\""
+        },
+        "32": {
+          "id": 32,
+          "color": "#9AC48A",
+          "alias": "cpu1 user",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"user\""
+        },
+        "33": {
+          "id": 33,
+          "color": "#F2C96D",
+          "alias": "cpu1 nice",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"nice\""
+        },
+        "34": {
+          "id": 34,
+          "color": "#65C5DB",
+          "alias": "cpu0 steal",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"0\" AND type_instance:\"steal\""
+        },
+        "35": {
+          "id": 35,
+          "color": "#F9934E",
+          "alias": "cpu1 steal",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"steal\""
+        },
+        "36": {
+          "id": 36,
+          "color": "#EA6460",
+          "alias": "cpu0 softirq",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"0\" AND type_instance:\"softirq\""
+        },
+        "37": {
+          "id": 37,
+          "color": "#5195CE",
+          "alias": "cpu1 softirq",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"softirq\""
+        },
+        "38": {
+          "id": 38,
+          "color": "#D683CE",
+          "alias": "eth0 octets",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"interface\" AND collectd_type:\"if_octets\" AND type_instance:\"eth0\""
+        },
+        "39": {
+          "id": 39,
+          "color": "#806EB7",
+          "alias": "packets",
+          "pin": true,
+          "type": "lucene",
+          "enable": true,
+          "query": "plugin:\"interface\" AND collectd_type:\"if_packets\""
+        }
+      },
+      "ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    "filter": {
+      "list": {
+        "0": {
+          "type": "time",
+          "field": "@timestamp",
+          "from": "now-1h",
+          "to": "now",
+          "mandate": "must",
+          "active": true,
+          "alias": "",
+          "id": 0
+        }
+      },
+      "ids": [
+        0
+      ]
+    }
+  },
+  "rows": [
+    {
+      "title": "Graph",
+      "height": "350px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 12,
+          "editable": true,
+          "group": [
+            "default"
+          ],
+          "type": "histogram",
+          "mode": "count",
+          "time_field": "@timestamp",
+          "value_field": "used",
+          "auto_int": true,
+          "resolution": 100,
+          "interval": "30s",
+          "fill": 3,
+          "linewidth": 3,
+          "timezone": "browser",
+          "spyable": true,
+          "zoomlinks": true,
+          "bars": true,
+          "stack": true,
+          "points": false,
+          "lines": false,
+          "legend": true,
+          "x-axis": true,
+          "y-axis": true,
+          "percentage": false,
+          "interactive": true,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ]
+          },
+          "title": "Events over time",
+          "intervals": [
+            "auto",
+            "1s",
+            "1m",
+            "5m",
+            "10m",
+            "30m",
+            "1h",
+            "3h",
+            "12h",
+            "1d",
+            "1w",
+            "1M",
+            "1y"
+          ],
+          "options": true,
+          "tooltip": {
+            "value_type": "cumulative",
+            "query_as_alias": true
+          },
+          "scale": "0.0000001",
+          "y_format": "none",
+          "grid": {
+            "max": null,
+            "min": null
+          },
+          "annotate": {
+            "enable": false,
+            "query": "*",
+            "size": 20,
+            "field": "_type",
+            "sort": [
+              "_score",
+              "desc"
+            ]
+          },
+          "pointradius": 5,
+          "show_query": true,
+          "legend_counts": true,
+          "zerofill": false,
+          "derivative": false
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "CPU0",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              24
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu0 idle",
+          "field": "value",
+          "unit": "jiffies"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              26
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu0 nice",
+          "field": "value",
+          "unit": "jiffies"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              31
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu0 user",
+          "field": "value",
+          "unit": "jiffies"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              27
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu0 wait IO",
+          "field": "value"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              29
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu0 system",
+          "field": "value",
+          "unit": "jiffies"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              34
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu0 steal",
+          "field": "value",
+          "unit": "jiffies"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              36
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu0 softirq",
+          "field": "value",
+          "unit": "jiffies"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "CPU1",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              25
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu1 idle",
+          "field": "value",
+          "unit": "jiffies"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              33
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu1 nice",
+          "field": "value",
+          "unit": "jiffies"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              32
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu1 user",
+          "field": "value",
+          "unit": ""
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              28
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu1 wait IO",
+          "field": "value"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              30
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu1 system",
+          "field": "value"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              35
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu1 steal",
+          "field": "value"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              37
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "cpu1 softirq",
+          "field": "value"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "CPU0 Evol",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              24
+            ]
+          },
+          "title": "cpu0 idle",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              26
+            ]
+          },
+          "title": "cpu0 nice",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              31
+            ]
+          },
+          "title": "cpu0 user",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              27
+            ]
+          },
+          "title": "cpu0 wait io",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              29
+            ]
+          },
+          "title": "cpu0 system",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              34
+            ]
+          },
+          "title": "cpu0 steal",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              36
+            ]
+          },
+          "title": "cpu0 softirq",
+          "derivative": true
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "CPU1 Evol",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              25
+            ]
+          },
+          "title": "cpu1 idle",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              33
+            ]
+          },
+          "title": "cpu1 nice",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              32
+            ]
+          },
+          "title": "cpu1 user",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              28
+            ]
+          },
+          "title": "cpu1 wait io",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              30
+            ]
+          },
+          "title": "cpu1 system",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              35
+            ]
+          },
+          "title": "cpu1 steal",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "5m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              37
+            ]
+          },
+          "title": "cpu1 softirq",
+          "derivative": true
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Load",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              23
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "float",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "field": "shortterm",
+          "unit": "",
+          "title": "shortterm"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              23
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "float",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "midterm",
+          "field": "midterm"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              23
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "float",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "longterm",
+          "field": "longterm"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "shortterm",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              23
+            ]
+          },
+          "title": "shortterm"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "midterm",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              23
+            ]
+          },
+          "title": "midterm"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "longterm",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              23
+            ]
+          },
+          "title": "longterm"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Disks used",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              2
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "field": "used",
+          "unit": "used",
+          "title": "Root"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              3
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "Boot",
+          "field": "used",
+          "unit": "used"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              4
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "field": "used",
+          "title": "Dev",
+          "unit": "used"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              5
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "Vagrant",
+          "field": "used",
+          "unit": "used"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              1
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "run-shm",
+          "field": "used",
+          "unit": "used"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              6
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "run-lock",
+          "field": "used",
+          "unit": "used"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Disks free",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              2
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "field": "free",
+          "unit": "free"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              3
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "boot",
+          "field": "free",
+          "unit": "free"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              4
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "field": "free",
+          "unit": "free",
+          "title": "dev"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              5
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "field": "free",
+          "unit": "free",
+          "title": "vagrant"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              1
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "run-shm",
+          "field": "free",
+          "unit": "free"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              6
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "run-lock",
+          "field": "free",
+          "unit": "free"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Disks evol",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "used",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              2
+            ]
+          },
+          "title": "Root"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "count",
+          "time_field": "@timestamp",
+          "value_field": null,
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              3
+            ]
+          },
+          "title": "Boot"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "used",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              4
+            ]
+          },
+          "title": "dev"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "used",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              5
+            ]
+          },
+          "title": "Vagrant"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "used",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              1
+            ]
+          },
+          "title": "run-shm"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "used",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              6
+            ]
+          },
+          "title": "run-lock"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Processes",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              7
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "running",
+          "field": "value",
+          "unit": "processes"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              11
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "field": "value",
+          "title": "Blocked",
+          "unit": "processes"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              10
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "sleeping",
+          "field": "value",
+          "unit": "processes"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              9
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "unit": "processes",
+          "field": "value",
+          "title": "stopped"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              12
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "paging",
+          "field": "value",
+          "unit": "processes"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              8
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "zombies",
+          "field": "value",
+          "unit": "processes"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Processes evol",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              7
+            ]
+          },
+          "title": "Running"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              11
+            ]
+          },
+          "title": "Blocked"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              10
+            ]
+          },
+          "title": "Sleeping"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              9
+            ]
+          },
+          "title": "Stopped"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              12
+            ]
+          },
+          "title": "Paging"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              8
+            ]
+          },
+          "title": "Zombies"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "I/O",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              13
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "sda read",
+          "unit": "ops",
+          "field": "read"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              14
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "sda read",
+          "field": "read",
+          "unit": "ms"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              13
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "sda write",
+          "field": "write",
+          "unit": "ops"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              14
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "sda write",
+          "field": "write",
+          "unit": "ms"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              15
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "sda read",
+          "field": "read",
+          "unit": "m ops/s"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              15
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "sda write",
+          "field": "write",
+          "unit": "m ops/s"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "I/O Evol",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "read",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              13
+            ]
+          },
+          "title": "sda read"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "read",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              14
+            ]
+          },
+          "title": "sda read"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "write",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              13
+            ]
+          },
+          "title": "sda write"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "write",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              14
+            ]
+          },
+          "title": "sda write"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "read",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              15
+            ]
+          },
+          "title": "merged r"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "write",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              15
+            ]
+          },
+          "title": "merged w"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Swap",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              16
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "swap free",
+          "field": "value",
+          "unit": ""
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              18
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "swap cached",
+          "field": "value"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              17
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "swap used",
+          "field": "value"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              19
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "mem free",
+          "field": "value"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              21
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "page cache",
+          "field": "value"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              22
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "buffer cache",
+          "field": "value"
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              20
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "field": "value",
+          "title": "mem used"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Swap evol",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              16
+            ]
+          },
+          "title": "swap free"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              18
+            ]
+          },
+          "title": "swap cached"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              17
+            ]
+          },
+          "title": "swap used"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              19
+            ]
+          },
+          "title": "mem free"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              21
+            ]
+          },
+          "title": "page cache"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              22
+            ]
+          },
+          "title": "buffer cache"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "value",
+          "interval": "1m",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              20
+            ]
+          },
+          "title": "mem used"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Eth0",
+      "height": "100px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              38
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "eth0 tx",
+          "field": "tx",
+          "unit": ""
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "tx",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              38
+            ]
+          },
+          "title": "eth0 tx",
+          "derivative": true
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              39
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "field": "tx",
+          "title": "packets tx"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "tx",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              39
+            ]
+          },
+          "title": "packets tx",
+          "derivative": true
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              38
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "bytes",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "title": "eth0 rx",
+          "field": "rx",
+          "unit": ""
+        },
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "stats",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              39
+            ]
+          },
+          "style": {
+            "font-size": "24pt"
+          },
+          "format": "number",
+          "mode": "mean",
+          "display_breakdown": "no",
+          "sort_field": "",
+          "sort_reverse": false,
+          "label_name": "Query",
+          "value_name": "Value",
+          "spyable": true,
+          "field": "rx",
+          "title": "packets rx"
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "rx",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              38
+            ]
+          },
+          "title": "eth0 rx",
+          "derivative": true
+        },
+        {
+          "span": 2,
+          "editable": true,
+          "type": "sparklines",
+          "loadingEditor": false,
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "rx",
+          "interval": "30s",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              39
+            ]
+          },
+          "title": "packets rx",
+          "derivative": true
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Events",
+      "height": "350px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "title": "All events",
+          "error": false,
+          "span": 12,
+          "editable": true,
+          "group": [
+            "default"
+          ],
+          "type": "table",
+          "size": 100,
+          "pages": 5,
+          "offset": 0,
+          "sort": [
+            "@timestamp",
+            "desc"
+          ],
+          "style": {
+            "font-size": "9pt"
+          },
+          "overflow": "min-height",
+          "fields": [],
+          "localTime": true,
+          "timeField": "@timestamp",
+          "highlight": [],
+          "sortable": true,
+          "header": true,
+          "paging": true,
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              0
+            ]
+          },
+          "field_list": true,
+          "status": "Stable",
+          "trimFactor": 300,
+          "normTimes": true,
+          "all_fields": false
+        }
+      ],
+      "notice": false
+    }
+  ],
+  "editable": true,
+  "failover": false,
+  "index": {
+    "interval": "day",
+    "pattern": "[logstash-]YYYY.MM.DD",
+    "default": "NO_TIME_FILTER_OR_INDEX_PATTERN_NOT_MATCHED",
+    "warm_fields": true
+  },
+  "style": "light",
+  "panel_hints": true,
+  "pulldowns": [
+    {
+      "type": "query",
+      "collapse": true,
+      "notice": false,
+      "query": "*",
+      "pinned": true,
+      "history": [
+        "plugin:\"interface\" AND collectd_type:\"if_packets\"",
+        "plugin:\"interface\" AND collectd_type:\"if_octets\" AND type_instance:\"eth0\"",
+        "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"softirq\"",
+        "plugin:\"cpu\" AND plugin_instance:\"0\" AND type_instance:\"softirq\"",
+        "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"steal\"",
+        "plugin:\"cpu\" AND plugin_instance:\"0\" AND type_instance:\"steal\"",
+        "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"nice\"",
+        "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"user\"",
+        "plugin:\"cpu\" AND plugin_instance:\"0\" AND type_instance:\"user\"",
+        "plugin:\"cpu\" AND plugin_instance:\"1\" AND type_instance:\"system\""
+      ],
+      "remember": 10,
+      "enable": true
+    },
+    {
+      "type": "filtering",
+      "collapse": true,
+      "notice": true,
+      "enable": true
+    }
+  ],
+  "nav": [
+    {
+      "type": "timepicker",
+      "collapse": false,
+      "notice": false,
+      "status": "Stable",
+      "time_options": [
+        "5m",
+        "15m",
+        "1h",
+        "6h",
+        "12h",
+        "24h",
+        "2d",
+        "7d",
+        "30d"
+      ],
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "timefield": "@timestamp",
+      "now": true,
+      "filter_id": 0,
+      "enable": true
+    }
+  ],
+  "loader": {
+    "save_gist": false,
+    "save_elasticsearch": true,
+    "save_local": true,
+    "save_default": true,
+    "save_temp": true,
+    "save_temp_ttl_enable": true,
+    "save_temp_ttl": "30d",
+    "load_gist": true,
+    "load_elasticsearch": true,
+    "load_elasticsearch_size": 20,
+    "load_local": true,
+    "hide": false
+  },
+  "refresh": "5s"
+}
