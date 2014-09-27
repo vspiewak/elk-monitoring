@@ -22,10 +22,10 @@ wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | apt-key add 
 echo 'deb http://packages.elasticsearch.org/logstash/1.4/debian stable main' >> /etc/apt/sources.list.d/logstash.list
 
 
-echo -e "$ECHO_PREFIX Update packages index"
+echo -e "$ECHO_PREFIX Update APT packages index"
 apt-get -qq update
 
-echo -e "$ECHO_PREFIX Update system packages"
+echo -e "$ECHO_PREFIX Update APT system packages"
 apt-get -y -qq upgrade
 
 echo -e "$ECHO_PREFIX Install curl" 
@@ -56,7 +56,7 @@ cp /vagrant/collectd.conf /etc/collectd/
 echo -e "$ECHO_PREFIX Restart Collectd"
 /etc/init.d/collectd restart
 
-echo -e "$ECHO_PREFIX Install NGINX"
+echo -e "$ECHO_PREFIX Install NGiNX"
 apt-get -y -qq install nginx
 update-rc.d nginx defaults
 
@@ -110,5 +110,5 @@ update-rc.d logstash defaults
 echo -e "$ECHO_PREFIX Configure Logstash"
 cp /vagrant/logstash.conf /etc/logstash/conf.d/
 
-echo -e "$ECHO_PREFIX start Logstash"
+echo -e "$ECHO_PREFIX Start Logstash"
 /etc/init.d/logstash restart
