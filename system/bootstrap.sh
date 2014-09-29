@@ -11,16 +11,11 @@ echo -e "$ECHO_PREFIX Set Europe/Paris as default timezone"
 rm /etc/localtime
 ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 
-mkdir -p /etc/apt/sources.list.d
-
-echo -e "$ECHO_PREFIX Add Elasticsearch APT repository"
+echo -e "$ECHO_PREFIX Add Elasticsearch & Logstash APT repository"
 wget -qO - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | apt-key add -
+mkdir -p /etc/apt/sources.list.d
 echo 'deb http://packages.elasticsearch.org/elasticsearch/1.3/debian stable main' >> /etc/apt/sources.list.d/elasticsearch.list
-
-echo -e "$ECHO_PREFIX Add Logstash APT repository"
-wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | apt-key add -
 echo 'deb http://packages.elasticsearch.org/logstash/1.4/debian stable main' >> /etc/apt/sources.list.d/logstash.list
-
 
 echo -e "$ECHO_PREFIX Update APT packages index"
 apt-get -qq update
@@ -85,20 +80,20 @@ echo 'JDK_DIRS="/opt/jdk"' >> /etc/default/elasticsearch
 echo 'JAVA_HOME="/opt/jdk"' >> /etc/default/elasticsearch
 #echo 'ES_HEAP_SIZE=1g' >> /etc/default/elasticsearch
 
-echo -e "$ECHO_PREFIX Install Elasticsearch head plugin"
-/usr/share/elasticsearch/bin/plugin -s -i mobz/elasticsearch-head
-
-echo -e "$ECHO_PREFIX Install Elasticsearch paramedic plugin"
-/usr/share/elasticsearch/bin/plugin -s -i karmi/elasticsearch-paramedic
-
-echo -e "$ECHO_PREFIX Install Elasticsearch kopf plugin"
-/usr/share/elasticsearch/bin/plugin -s -i lmenezes/elasticsearch-kopf
-
 echo -e "$ECHO_PREFIX Install Elasticsearch HQ plugin"
 /usr/share/elasticsearch/bin/plugin -s -i royrusso/elasticsearch-HQ
 
 echo -e "$ECHO_PREFIX Install Elasticsearch bigdesk plugin"
 /usr/share/elasticsearch/bin/plugin -s -i lukas-vlcek/bigdesk
+
+echo -e "$ECHO_PREFIX Install Elasticsearch head plugin"
+/usr/share/elasticsearch/bin/plugin -s -i mobz/elasticsearch-head
+
+echo -e "$ECHO_PREFIX Install Elasticsearch kopf plugin"
+/usr/share/elasticsearch/bin/plugin -s -i lmenezes/elasticsearch-kopf
+
+echo -e "$ECHO_PREFIX Install Elasticsearch paramedic plugin"
+/usr/share/elasticsearch/bin/plugin -s -i karmi/elasticsearch-paramedic
 
 echo -e "$ECHO_PREFIX Start Elasticsearch"
 /etc/init.d/elasticsearch restart
@@ -112,3 +107,18 @@ cp /vagrant/logstash.conf /etc/logstash/conf.d/
 
 echo -e "$ECHO_PREFIX Start Logstash"
 /etc/init.d/logstash restart
+
+echo -e "$ECHO_PREFIX Thank you for your patience"
+echo -e "$ECHO_PREFIX"
+echo -e "$ECHO_PREFIX Elasticsearch is available at:"
+echo -e "$ECHO_PREFIX * http://localhost:19200"
+echo -e "$ECHO_PREFIX * http://localhost:19200/_plugin/HQ"
+echo -e "$ECHO_PREFIX * http://localhost:19200/_plugin/bigdesk"
+echo -e "$ECHO_PREFIX * http://localhost:19200/_plugin/head"
+echo -e "$ECHO_PREFIX * http://localhost:19200/_plugin/kopf"
+echo -e "$ECHO_PREFIX * http://localhost:19200/_plugin/paramedic"
+echo -e "$ECHO_PREFIX"
+echo -e "$ECHO_PREFIX Kibana is available at:"
+echo -e "$ECHO_PREFIX * http://localhost:10080/kibana"
+echo -e "$ECHO_PREFIX * http://localhost:10080/kibana/index.html#/dashboard/file/collectd.json"
+echo -e "$ECHO_PREFIX * http://localhost:10080/kibana/index.html#/dashboard/file/system.json"
